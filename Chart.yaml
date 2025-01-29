@@ -1,0 +1,12 @@
+apiVersion: v2
+name: test-aiu
+description: est-aiu
+
+type: application
+version: 1.0.0
+appVersion: latest
+
+maintainers:
+  - name: Techops Team
+    email: techops@imtf.com
+    url: https://github.com/imtf-group

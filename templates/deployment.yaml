@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-aiu-app
+  namespace: test-aiu
+  labels:
+    app: test-aiu-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-aiu-app
+  template:
+    metadata:
+      labels:
+        app: test-aiu-app
+    spec:
+      containers:
+        - name: test-aiu-app
+          image: {{ .Values.image.name }}:{{ .Values.image.tag }}
